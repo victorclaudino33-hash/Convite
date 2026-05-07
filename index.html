@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Um Convite Especial ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff4d6d;
+            --pizza: #e31837;
+            --bg-light: #fff5f6;
+            --text-dark: #2d2d2d;
+        }
+
+        /* Reset para preencher a tela inteira */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Evita scrolls desnecessários */
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-light);
+        }
+
+        /* Container que ocupa 100% da tela visível */
+        .full-screen-wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: radial-gradient(circle at top right, #ffccd5, var(--bg-light));
+            position: relative;
+        }
+
+        /* Card principal adaptado para mobile */
+        .main-card {
+            background: rgba(255, 255, 255, 0.95);
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            max-height: 90vh;
+            border-radius: 40px;
+            padding: 30px 20px;
+            box-shadow: 0 20px 40px rgba(255, 77, 109, 0.15);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            backdrop-filter: blur(10px);
+            border: 1px solid white;
+            z-index: 2;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #ffe5ec;
+            color: var(--primary);
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Seção de informações com destaque */
+        .info-section {
+            background: #fdf2f4;
+            border-radius: 25px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            text-align: left;
+        }
+
+        .info-section p {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+
+        .info-section b { color: var(--primary); }
+
+        /* Lista de atividades */
+        .list {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+
+        .list-item span.icon {
+            font-size: 1.4rem;
+            margin-right: 12px;
+        }
+
+        .list-item div b {
+            display: block;
+            font-size: 0.85rem;
+            color: #333;
+        }
+
+        .list-item div small {
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        /* Botão WhatsApp Estilo "Call to Action" */
+        .btn-cta {
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-cta svg { width: 22px; margin-right: 10px; fill: white; }
+
+        /* Decoração de fundo (Corações) */
+        .floating-heart {
+            position: absolute;
+            color: var(--primary);
+            opacity: 0.1;
+            z-index: 1;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(20deg); }
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 0.7rem;
+            color: #bbb;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="full-screen-wrapper">
+        <!-- Corações Decorativos no Fundo -->
+        <div class="floating-heart" style="top: 10%; left: 10%; font-size: 3rem;">❤️</div>
+        <div class="floating-heart" style="bottom: 15%; right: 10%; font-size: 2rem;">❤️</div>
+        <div class="floating-heart" style="top: 20%; right: 20%; font-size: 1.5rem;">❤️</div>
+
+        <div class="main-card">
+            <header>
+                <div class="status-badge">UM CONVITE PARA VOCÊ</div>
+                <h1>Oi, meu amor!</h1>
+                <p style="font-size: 0.85rem; color: #777;">Preparei algo especial para hoje...</p>
+            </header>
+
+            <div class="info-section">
+                <p>📍 <b>Te espero no ponto às 18:10!</b><br>
+                Vou estar te esperando exatamente ali do lado da sua saída para irmos caminhando juntos ao <b>Super Shopping</b>. No seu ritmo, sem pressa.</p>
+            </div>
+
+            <div class="list">
+                <div class="list-item">
+                    <span class="icon">🎁</span>
+                    <div><b>Presente das Mães</b><small>Missão especial de hoje!</small></div>
+                </div>
+                <div class="list-item">
+                    <span class="icon">🍕</span>
+                    <div><b>Pizza Hut</b><small>Matar a saudade daquela pizza.</small></div>
+                </div>
+                <div class="list-item">
+                    <span class="icon">⏱️</span>
+                    <div><b>Desafio dos 30 Minutos</b><small>Quem acha o melhor presente surpresa?</small></div>
+                </div>
+            </div>
+
+            <!-- LEMBRE-SE: Troque o 5511999999999 pelo seu número real -->
+            <a href="https://wa.me/5511943310520?text=Oi%20amor!%20Eu%20topo%20muito%20esse%20encontro!%20Amei%20o%20site%20e%20te%20vejo%20no%20ponto%20às%2018:10%20❤️" class="btn-cta">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412s-1.239 6.164-3.485 8.412c-2.245 2.247-5.231 3.486-8.412 3.486-2.001 0-3.968-.506-5.716-1.467l-6.677 1.75zm5.966-3.13l.369.219c1.231.733 2.645 1.12 4.089 1.121 4.544 0 8.241-3.696 8.244-8.24.001-2.201-.856-4.269-2.413-5.827-1.558-1.558-3.628-2.415-5.83-2.415-4.542 0-8.24 3.697-8.242 8.24-.001 1.54.432 3.039 1.253 4.341l.241.385-1.106 4.037 4.14-1.086z"/></svg>
+                ACEITO O CONVITE ❤️
+            </a>
+
+            <footer class="footer-text">
+                Com amor, feito só pra você
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
